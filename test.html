@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="mailto:sywd01234@163.com;qq1476617674@163.com">给我发邮件</a>
+
+    <script>
+        //var getNum;//------------------------1
+        // function getCounter() { // ----------2
+        //     var n = 1;
+        //     var inner = function () { return n++; }
+        //     return inner;
+        // }
+
+
+        (function(){
+            var n=1;
+            window.getnum = function(){
+                n++
+                console.log(n)
+            }
+        })()
+
+        console.log(window.getnum())
+        console.log(window.getnum())
+        //window.getnum()
+        //window.getnum()
+
+
+        //var is always in memory
+
+        //getNum = getCounter();//------------3
+        //console.log(getCounter()); //1 ---------4
+        //console.log(getCounter()); //2 ----
+
+        var data = [];
+        for (var k = 0; k < 3; k++) {
+            data[k] = function () {
+                alert(k);
+            };
+        }
+
+        data[0]()
+        data[1]()
+        data[2]()
+
+
+
+
+    </script>
+</body>
+
+</html>
